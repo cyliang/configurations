@@ -18,8 +18,9 @@ This is a repository for my personal configurations for zsh, vim, and screen.
 1. Install [Oh My Zsh][oh-my-zsh].
 2. Install [vim][] 8 with Python supported. (You might need to compile this yourself.)
 3. Install zsh theme: powerlevel9k.
-4. Install `.zshrc` and `.vimrc`.
-5. Install vim plugins.
+4. Install Vundle for vim.
+5. Install `.zshrc` and `.vimrc`.
+6. Install vim plugins.
 
 ### Build Vim from Source
 Please refer https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source.
@@ -27,6 +28,11 @@ Please refer https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-so
 ### Install zsh Theme
 ```
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+```
+
+### Install Vundle for Vim
+```
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
 
 ### Install Configuration Files
