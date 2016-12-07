@@ -1,5 +1,4 @@
 export PATH=$HOME/bin:$HOME/usr/bin:$HOME/.local/bin:$PATH
-export TERM="xterm-256color"
 export ZSH=/home/cyliang/.oh-my-zsh
 
 ZSH_THEME="powerlevel9k/powerlevel9k"
