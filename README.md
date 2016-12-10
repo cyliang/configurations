@@ -50,6 +50,11 @@ wget https://raw.githubusercontent.com/cyliang/configurations/master/.vimrc -O ~
 #### Install YouCompleteMe
 Please refer https://github.com/Valloric/YouCompleteMe#ubuntu-linux-x64.
 
+##### Install Extra Configuration File
+```sh
+wget https://raw.githubusercontent.com/JDevlieghere/dotfiles/master/.vim/.ycm_extra_conf.py -O ~/.vim/.ycm_extra_conf.py
+```
+
 
 [oh-my-zsh]: http://ohmyz.sh/
 [vim]: https://github.com/vim/vim

@@ -36,6 +36,7 @@ set laststatus=2
 Plugin 'airblade/vim-gitgutter'
 
 Plugin 'valloric/youcompleteme'
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -107,3 +108,4 @@ set softtabstop=4
 set tabstop=4
 set shiftwidth=4
 set expandtab
+
