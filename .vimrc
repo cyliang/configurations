@@ -102,3 +102,8 @@ endif " has("autocmd")
 if has('syntax') && has('eval')
   packadd matchit
 endif
+
+set softtabstop=4
+set tabstop=4
+set shiftwidth=4
+set expandtab
