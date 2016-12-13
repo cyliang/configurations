@@ -1,5 +1,5 @@
 export PATH=$HOME/bin:$HOME/usr/bin:$HOME/.local/bin:$PATH
-export ZSH=/home/cyliang/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_DIR_HOME_BACKGROUND='033'
