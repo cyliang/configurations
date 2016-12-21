@@ -10,8 +10,6 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'w0rp/ale'
-
 Plugin 'scrooloose/nerdtree'
 map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
@@ -32,11 +30,18 @@ let g:NERDTreeIndicatorMapCustom = {
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 set laststatus=2
+let g:airline#extensions#ycm#enabled = 1
+let g:airline_powerline_fonts = 1
 
 Plugin 'airblade/vim-gitgutter'
 
+Plugin 'tpope/vim-fugitive'
+
 Plugin 'valloric/youcompleteme'
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+let g:ycm_confirm_extra_conf = 0
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_key_invoke_completion = '<C-e>'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
