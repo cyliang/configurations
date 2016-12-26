@@ -7,23 +7,24 @@ This is a repository for my personal configurations for zsh, vim, and screen.
 
 ### For vim
 - [VundleVim/Vundle.vim](//github.com/VundleVim/Vundle.vim)
-- [w0rp/ale](//github.com/w0rp/ale)
 - [scrooloose/nerdtree](//github.com/scrooloose/nerdtree)
 - [Xuyuanp/nerdtree-git-plugin](//github.com/Xuyuanp/nerdtree-git-plugin)
 - [vim-airline/vim-airline](//github.com/vim-airline/vim-airline)
 - [airblade/vim-gitgutter](//github.com/airblade/vim-gitgutter)
+- [tpope/vim-fugitive](//github.com/tpope/vim-fugitive)
+- [rdnetto/YCM-Generator](//github.com/rdnetto/YCM-Generator)
 - [valloric/youcompleteme](//github.com/valloric/youcompleteme)
+- [cyliang/vim-vendetta](//github.com/cyliang/vim-vendetta)
+- [nathanaelkane/vim-indent-guides](//github.com/nathanaelkane/vim-indent-guides)
+- [majutsushi/tagbar](//github.com/majutsushi/tagbar)
 
 ## Installation Steps
-1. Install [Oh My Zsh][oh-my-zsh].
-2. Install [vim][] 8 with Python supported. (You might need to compile this yourself.)
+1. Install one of [Powerline patched font](//github.com/powerline/fonts).
+2. Install [Oh My Zsh][oh-my-zsh].
 3. Install zsh theme: powerlevel9k.
 4. Install Vundle for vim.
 5. Install `.zshrc`, `.aliases`, and `.vimrc`.
 6. Install vim plugins.
-
-### Build Vim from Source
-Please refer https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source.
 
 ### Install zsh Theme
 ```
@@ -50,11 +51,30 @@ wget https://raw.githubusercontent.com/cyliang/configurations/master/.vimrc -O ~
 #### Install YouCompleteMe
 Please refer https://github.com/Valloric/YouCompleteMe#ubuntu-linux-x64.
 
+For example:
+```sh
+cd ~/.vim/bundle/YouCompleteMe
+./install.py --clang-completer
+```
+
 ##### Install Extra Configuration File
 ```sh
 wget https://raw.githubusercontent.com/JDevlieghere/dotfiles/master/.vim/.ycm_extra_conf.py -O ~/.vim/.ycm_extra_conf.py
 ```
 
+## Usage
+### Vim
+#### To Update Packages
+Type `:PluginUpdate` to automatically update packages from GitHub.
+
+#### Key Mappings
+- `Ctrl-c`: Toggle **Tagbar**
+- `Ctrl-n`: Toggle **Nerd Tree**
+- `Ctrl-e`: Trigger **YCM** to show hints.
+- `Ctrl-]`: Goto **declaration**.
+- `Ctrl-\`: Goto **definition**.
+- `Tab`: Navigate to next buffer.
+- `Shift-Tab`: Navigate to previous buffer.
 
 [oh-my-zsh]: http://ohmyz.sh/
 [vim]: https://github.com/vim/vim

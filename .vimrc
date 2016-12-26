@@ -11,7 +11,6 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree'
-map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 Plugin 'Xuyuanp/nerdtree-git-plugin'
@@ -41,11 +40,24 @@ Plugin 'airblade/vim-gitgutter'
 
 Plugin 'tpope/vim-fugitive'
 
+Plugin 'rdnetto/YCM-Generator'
 Plugin 'valloric/youcompleteme'
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_key_invoke_completion = '<C-e>'
+let g:ycm_show_diagnostics_ui = 1
+
+Plugin 'cyliang/vim-vendetta'
+set background=dark
+
+Plugin 'nathanaelkane/vim-indent-guides'
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
+let g:indent_guides_auto_colors = 0
+
+Plugin 'majutsushi/tagbar'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -76,9 +88,6 @@ filetype plugin indent on    " required
 if v:progname =~? "evim"
   finish
 endif
-
-" Get the defaults that most users want.
-source $VIMRUNTIME/defaults.vim
 
 set nobackup		" do not keep a backup file, use versions instead
 
@@ -113,10 +122,43 @@ if has('syntax') && has('eval')
   packadd matchit
 endif
 
+" Allow backspacing over everything in insert mode.
+set backspace=indent,eol,start
+
+set history=200     " keep 200 lines of command line history
+set ruler       " show the cursor position all the time
+set showcmd     " display incomplete commands
+set wildmenu        " display completion matches in a status line
+
+set ttimeout        " time out for key codes
+set ttimeoutlen=100 " wait up to 100ms after Esc for special key
+
+" Show a few lines of context around the cursor.  Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+
+" Do incremental searching when it's possible to timeout.
+if has('reltime')
+  set incsearch
+endif
+
+" In many terminal emulators the mouse works just fine.  By enabling it you
+" can position the cursor, Visually select and scroll with the mouse.
+if has('mouse')
+  set mouse=a
+endif
+
+colorscheme vendetta
+set number
 set softtabstop=4
 set tabstop=4
 set shiftwidth=4
 set expandtab
 
-nnoremap <tab> :bnext<CR>
+nnoremap <tab>   :bnext<CR>
 nnoremap <S-tab> :bprevious<CR>
+nnoremap <C-]>   :YcmCompleter GoToDeclaration<CR>
+nnoremap <C-\>   :YcmCompleter GoToDefinition<CR>
+nnoremap <C-c>   :TagbarToggle<CR>
+nnoremap <C-n>   :NERDTreeToggle<CR>
+
