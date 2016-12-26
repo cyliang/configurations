@@ -15,6 +15,7 @@ Check branch [with-color_coded](//github.com/cyliang/configurations/tree/with-co
 - [tpope/vim-fugitive](//github.com/tpope/vim-fugitive)
 - [rdnetto/YCM-Generator](//github.com/rdnetto/YCM-Generator)
 - [valloric/youcompleteme](//github.com/valloric/youcompleteme)
+- [jeaye/color_coded](//github.com/jeaye/color_coded)
 - [cyliang/vim-vendetta](//github.com/cyliang/vim-vendetta)
 - [nathanaelkane/vim-indent-guides](//github.com/nathanaelkane/vim-indent-guides)
 - [majutsushi/tagbar](//github.com/majutsushi/tagbar)
@@ -56,6 +57,21 @@ For example:
 ```sh
 cd ~/.vim/bundle/YouCompleteMe
 ./install.py --clang-completer
+```
+
+#### Install color_coded
+Please refer https://github.com/jeaye/color_coded#all.
+
+For example:
+```sh
+cd ~/.vim/bundle/color_coded
+mkdir build && cd build
+cmake ..
+make && make install # Compiling with GCC is preferred, ironically
+# Clang works on OS X, but has mixed success on Linux and the BSDs
+
+# Cleanup afterward; frees several hundred megabytes
+make clean && make clean_clang
 ```
 
 ##### Install Extra Configuration File

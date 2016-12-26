@@ -48,6 +48,8 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_key_invoke_completion = '<C-e>'
 let g:ycm_show_diagnostics_ui = 1
 
+Plugin 'jeaye/color_coded'
+
 Plugin 'cyliang/vim-vendetta'
 set background=dark
 
