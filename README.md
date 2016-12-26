@@ -1,5 +1,6 @@
 # Configurations
 This is a repository for my personal configurations for zsh, vim, and screen.
+Check branch [with-color_coded](//github.com/cyliang/configurations/tree/with-color_coded) for semantic C-family code highlight support.
 
 ## Included Packages
 ### For zsh
