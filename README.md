@@ -40,9 +40,9 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 ### Install Configuration Files
 ```sh
-wget https://raw.githubusercontent.com/cyliang/configurations/master/.zshrc -O ~/.zshrc
-wget https://raw.githubusercontent.com/cyliang/configurations/master/.aliases -O ~/.aliases
-wget https://raw.githubusercontent.com/cyliang/configurations/master/.vimrc -O ~/.vimrc
+wget https://raw.githubusercontent.com/cyliang/configurations/with-color_coded/.zshrc -O ~/.zshrc
+wget https://raw.githubusercontent.com/cyliang/configurations/with-color_coded/.aliases -O ~/.aliases
+wget https://raw.githubusercontent.com/cyliang/configurations/with-color_coded/.vimrc -O ~/.vimrc
 ```
 
 ### Install Vim Plugins
