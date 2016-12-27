@@ -155,10 +155,15 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+nnoremap >       :vertical resize +1<CR>
+nnoremap <       :vertical resize -1<CR>
+nnoremap +       :resize +1<CR>
+nnoremap -       :resize -1<CR>
 nnoremap <tab>   :bnext<CR>
 nnoremap <S-tab> :bprevious<CR>
 nnoremap <C-]>   :YcmCompleter GoToDeclaration<CR>
 nnoremap <C-\>   :YcmCompleter GoToDefinition<CR>
+nnoremap <C-f>   :YcmCompleter FixIt<CR>
 nnoremap <C-c>   :TagbarToggle<CR>
 nnoremap <C-n>   :NERDTreeToggle<CR>
 
