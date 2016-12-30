@@ -61,6 +61,8 @@ let g:indent_guides_auto_colors = 0
 
 Plugin 'majutsushi/tagbar'
 
+Plugin 'cyliang/llvm.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -157,10 +159,15 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+nnoremap >       :vertical resize +1<CR>
+nnoremap <       :vertical resize -1<CR>
+nnoremap +       :resize +1<CR>
+nnoremap -       :resize -1<CR>
 nnoremap <tab>   :bnext<CR>
 nnoremap <S-tab> :bprevious<CR>
 nnoremap <C-]>   :YcmCompleter GoToDeclaration<CR>
 nnoremap <C-\>   :YcmCompleter GoToDefinition<CR>
+nnoremap <C-f>   :YcmCompleter FixIt<CR>
 nnoremap <C-c>   :TagbarToggle<CR>
 nnoremap <C-n>   :NERDTreeToggle<CR>
 
