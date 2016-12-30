@@ -59,6 +59,8 @@ let g:indent_guides_auto_colors = 0
 
 Plugin 'majutsushi/tagbar'
 
+Plugin 'cyliang/llvm.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
