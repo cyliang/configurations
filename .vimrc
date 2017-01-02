@@ -151,6 +151,7 @@ if has('mouse')
 endif
 
 colorscheme vendetta
+syntax on
 set number
 set softtabstop=4
 set tabstop=4
