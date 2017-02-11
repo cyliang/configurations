@@ -14,17 +14,17 @@ Plugin 'scrooloose/nerdtree'
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 Plugin 'Xuyuanp/nerdtree-git-plugin'
-let g:NERDTreeIndicatorMapCustom = {
-    \ "Modified"  : "*",
-    \ "Staged"    : "+",
-    \ "Untracked" : "%",
-    \ "Renamed"   : "➜",
-    \ "Unmerged"  : "═",
-    \ "Deleted"   : "-",
-    \ "Dirty"     : "x",
-    \ "Clean"     : "✓",
-    \ "Unknown"   : "?"
-    \ }
+"let g:NERDTreeIndicatorMapCustom = {
+"    \ "Modified"  : "*",
+"    \ "Staged"    : "+",
+"    \ "Untracked" : "%",
+"    \ "Renamed"   : "➜",
+"    \ "Unmerged"  : "═",
+"    \ "Deleted"   : "-",
+"    \ "Dirty"     : "x",
+"    \ "Clean"     : "✓",
+"    \ "Unknown"   : "?"
+"    \ }
 
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -48,7 +48,19 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_key_invoke_completion = '<C-e>'
 let g:ycm_show_diagnostics_ui = 1
 
+Plugin 'rhysd/vim-clang-format'
+let g:clang_format#code_style = 'llvm'
+let g:clang_format#style_options = {
+            \ "AccessModifierOffset": -4,
+            \ "AlignConsecutiveAssignments": "true",
+            \ "AllowShortLoopsOnASingleLine": "true",
+            \ "ColumnLimit": 0,
+            \ "IndentWidth": 4,
+            \ "MaxEmptyLinesToKeep": 2}
+
 Plugin 'jeaye/color_coded'
+
+Plugin 'ntpeters/vim-better-whitespace'
 
 Plugin 'cyliang/vim-vendetta'
 set background=dark
@@ -133,6 +145,7 @@ set history=200     " keep 200 lines of command line history
 set ruler       " show the cursor position all the time
 set showcmd     " display incomplete commands
 set wildmenu        " display completion matches in a status line
+syntax on
 
 set ttimeout        " time out for key codes
 set ttimeoutlen=100 " wait up to 100ms after Esc for special key
@@ -153,7 +166,6 @@ if has('mouse')
 endif
 
 colorscheme vendetta
-syntax on
 set number
 set softtabstop=4
 set tabstop=4
@@ -171,4 +183,7 @@ nnoremap <C-\>   :YcmCompleter GoToDefinition<CR>
 nnoremap <C-f>   :YcmCompleter FixIt<CR>
 nnoremap <C-c>   :TagbarToggle<CR>
 nnoremap <C-n>   :NERDTreeToggle<CR>
+
+vnoremap <C-f>   :ClangFormat<CR>
+vnoremap <C-d>   :StripWhitespace<CR>
 
