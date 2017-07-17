@@ -174,6 +174,12 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+" Line width hint (80)
+if exists('+colorcolumn')
+  set colorcolumn=80
+endif
+
+
 nnoremap >       :vertical resize +1<CR>
 nnoremap <       :vertical resize -1<CR>
 nnoremap +       :resize +1<CR>
