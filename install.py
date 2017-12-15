@@ -43,9 +43,10 @@ print "\n---- [ 3. ] Install Vundle for vim"
 run_shell('git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim')
 
 print "\n---- [ 4. ] Install cyliang's configuration files"
-run_shell('wget https://raw.githubusercontent.com/cyliang/configurations/%s/.zshrc -O ~/.zshrc' % branch)
-run_shell('wget https://raw.githubusercontent.com/cyliang/configurations/%s/.aliases -O ~/.aliases' % branch)
+run_shell('wget https://raw.githubusercontent.com/cyliang/configurations/master/.zshrc -O ~/.zshrc')
+run_shell('wget https://raw.githubusercontent.com/cyliang/configurations/master/.aliases -O ~/.aliases')
 run_shell('wget https://raw.githubusercontent.com/cyliang/configurations/%s/.vimrc -O ~/.vimrc' % branch)
+run_shell('wget https://raw.githubusercontent.com/cyliang/configurations/master/.screenrc -O ~/.screenrc')
 
 print "\n---- [ 5. ] Install vim's plugins"
 run_shell('vim -c "PluginInstall" -c "qa"')
