@@ -39,12 +39,13 @@ def run_shell(cmd):
 
 
 print "\n---- [ 1. ] Install Oh My Zsh"
-run_shell('sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"')
+run_shell('git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh')
 
 print "\n---- [ 2. ] Install zsh theme"
 run_shell('git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k')
 
 print "\n---- [ 3. ] Install Vundle for vim"
+run_shell('mkdir -p ~/.vim/bundle')
 run_shell('git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim')
 
 print "\n---- [ 4. ] Install cyliang's configuration files"
@@ -65,4 +66,6 @@ if branch == 'with-color_coded':
     run_shell('cd ~/.vim/bundle/color_coded && mkdir build && cd build && cmake .. && make && make install && make clean && make clean_clang')
 
 print "\n---- Installation Completed! ----"
+print "It's time to change your shell... (password may be required)"
+run_shell('chsh -s /bin/zsh')
 print "Please restart your shell."
