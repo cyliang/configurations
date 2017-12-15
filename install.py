@@ -34,7 +34,7 @@ if not find_executable('vim') or '+python' not in check_output(['vim', '--versio
 
 if strtobool(raw_input('Do you want to install with color_coded? (y/n)')):
     if '+lua' not in check_output(['vim', '--version']):
-        print "\033[31mColor_coded requires vim with lua supported"
+        print "\033[31mColor_coded requires vim with lua supported.\033[m"
         abort()
 
     branch = 'with-color_coded'
