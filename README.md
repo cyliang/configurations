@@ -24,7 +24,7 @@ Check branch [with-color_coded](//github.com/cyliang/configurations/tree/with-co
 2. Install [Oh My Zsh][oh-my-zsh].
 3. Install zsh theme: powerlevel9k.
 4. Install Vundle for vim.
-5. Install `.zshrc`, `.aliases`, and `.vimrc`.
+5. Install `.zshrc`, `.aliases`, `.screenrc`, and `.vimrc`.
 6. Install vim plugins.
 
 ### Install zsh Theme
@@ -42,6 +42,7 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 wget https://raw.githubusercontent.com/cyliang/configurations/master/.zshrc -O ~/.zshrc
 wget https://raw.githubusercontent.com/cyliang/configurations/master/.aliases -O ~/.aliases
 wget https://raw.githubusercontent.com/cyliang/configurations/master/.vimrc -O ~/.vimrc
+wget https://raw.githubusercontent.com/cyliang/configurations/master/.screenrc -O ~/.screenrc
 ```
 
 ### Install Vim Plugins
