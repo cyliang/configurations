@@ -165,7 +165,11 @@ if has('mouse')
   set mouse=a
 endif
 
-colorscheme vendetta
+try
+    colorscheme vendetta
+catch /^Vim\%((\a\+)\)\=:E185/
+endtry
+
 set number
 set softtabstop=4
 set tabstop=4
