@@ -1,0 +1,27 @@
+altscreen on # erase screen when quit apps                                      
+defutf8 on
+defc1 off    # treat input chars 128 ~ 159 as control functions                    
+defflow on
+vbell off 
+startup_message off
+shell $SHELL
+term "screen-256color"
+
+#Caption
+caption always "%{= wk} %{= KY} [%n]%t @ %H %{-} %= %{= KR} %l %{-} | %{= KG} %Y-%m-%d %{-} "
+
+#Hardstatus
+hardstatus alwayslastline " %-Lw%{= Bw}%n%f %t%{-}%+Lw %=| %0c:%s "
+
+# using Ctrl+Left/Right or Shift+Left/Right
+bindkey ^[[1;2C next
+bindkey ^[[1;2D prev
+bindkey ^[[1;5D prev
+bindkey ^[[1;5C next
+bindkey ^[[D prev
+bindkey ^[[C next
+
+# encoding
+bind b encoding big5 utf8
+bind u encoding utf8 utf8
+#defbce on  # erase background with current bg color                              

@@ -25,7 +25,7 @@ Check branch [with-color_coded](//github.com/cyliang/configurations/tree/with-co
 2. Install [Oh My Zsh][oh-my-zsh].
 3. Install zsh theme: powerlevel9k.
 4. Install Vundle for vim.
-5. Install `.zshrc`, `.aliases`, and `.vimrc`.
+5. Install `.zshrc`, `.aliases`, `.screenrc`, and `.vimrc`.
 6. Install vim plugins.
 
 ### Install zsh Theme
@@ -40,9 +40,10 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 ### Install Configuration Files
 ```sh
-wget https://raw.githubusercontent.com/cyliang/configurations/with-color_coded/.zshrc -O ~/.zshrc
-wget https://raw.githubusercontent.com/cyliang/configurations/with-color_coded/.aliases -O ~/.aliases
+wget https://raw.githubusercontent.com/cyliang/configurations/master/.zshrc -O ~/.zshrc
+wget https://raw.githubusercontent.com/cyliang/configurations/master/.aliases -O ~/.aliases
 wget https://raw.githubusercontent.com/cyliang/configurations/with-color_coded/.vimrc -O ~/.vimrc
+wget https://raw.githubusercontent.com/cyliang/configurations/master/.screenrc -O ~/.screenrc
 ```
 
 ### Install Vim Plugins
@@ -59,6 +60,11 @@ cd ~/.vim/bundle/YouCompleteMe
 ./install.py --clang-completer
 ```
 
+##### Install Extra Configuration File
+```sh
+wget https://raw.githubusercontent.com/JDevlieghere/dotfiles/master/.vim/.ycm_extra_conf.py -O ~/.vim/.ycm_extra_conf.py
+```
+
 #### Install color_coded
 Please refer https://github.com/jeaye/color_coded#all.
 
@@ -72,11 +78,6 @@ make && make install # Compiling with GCC is preferred, ironically
 
 # Cleanup afterward; frees several hundred megabytes
 make clean && make clean_clang
-```
-
-##### Install Extra Configuration File
-```sh
-wget https://raw.githubusercontent.com/JDevlieghere/dotfiles/master/.vim/.ycm_extra_conf.py -O ~/.vim/.ycm_extra_conf.py
 ```
 
 ## Usage
