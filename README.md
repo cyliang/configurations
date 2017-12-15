@@ -2,6 +2,11 @@
 This is a repository for my personal configurations for zsh, vim, and screen.
 Check branch [with-color_coded](//github.com/cyliang/configurations/tree/with-color_coded) for semantic C-family code highlight support.
 
+## Quick Install
+```sh
+python2 -c "$(wget -O - 'http://cyliang.github.io/configurations/install.py')"
+```
+
 ## Included Packages
 ### For zsh
 - [bhilburn/powerlevel9k](//github.com/bhilburn/powerlevel9k)
