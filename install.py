@@ -3,6 +3,7 @@
 from distutils.util import strtobool
 from distutils.spawn import find_executable
 from os import system, abort
+from os.path import expanduser, exists
 from subprocess import check_output
 
 print "----------------------------------------"
@@ -19,6 +20,10 @@ print "\033[33mIt may take a long time to install.\033[m"
 # Check dependency
 if not (find_executable('wget') and find_executable('git') and find_executable('make') and find_executable('cmake')):
     print "\033[31mThis installer depends on git, wget, build-essential, and cmake.\033[m"
+    abort()
+
+if not (exists('/usr/include/python2.7') and exists('/usr/include/python3.4')):
+    print "\033[31mPackage python-dev and python3-dev are required during installation.\033[m"
     abort()
 
 # Check zsh install
@@ -49,14 +54,23 @@ def run_shell(cmd):
 
 
 print "\n---- [ 1. ] Install Oh My Zsh"
-run_shell('git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh')
+if exists(expanduser('~/.oh-my-zzsh')):
+    print "Ignored."
+else:
+    run_shell('git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh')
 
 print "\n---- [ 2. ] Install zsh theme"
-run_shell('git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k')
+if exists(expanduser('~/.oh-my-zsh/custom/themes/powerlevel9k')):
+    print "Ignored."
+else:
+    run_shell('git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k')
 
 print "\n---- [ 3. ] Install Vundle for vim"
-run_shell('mkdir -p ~/.vim/bundle')
-run_shell('git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim')
+if exists(expanduser('~/.vim/bundle/Vundle.vim')):
+    print "Ignored."
+else:
+    run_shell('mkdir -p ~/.vim/bundle')
+    run_shell('git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim')
 
 print "\n---- [ 4. ] Install cyliang's configuration files"
 run_shell('wget https://raw.githubusercontent.com/cyliang/configurations/master/.zshrc -O ~/.zshrc')
