@@ -20,6 +20,11 @@ if not (find_executable('wget') and find_executable('git')):
     print "\033[31mThis installer depends on git and wget.\033[m"
     abort()
 
+# Check zsh install
+if not find_executable('zsh'):
+    print "\033[31mInstall zsh before running this script.\033[m"
+    abort()
+
 
 if strtobool(raw_input('Do you want to install with color_coded? (y/n)')):
     branch = 'with-color_coded'
