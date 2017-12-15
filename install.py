@@ -22,7 +22,7 @@ if not (find_executable('wget') and find_executable('git') and find_executable('
     print "\033[31mThis installer depends on git, wget, build-essential, and cmake.\033[m"
     abort()
 
-if not (exists('/usr/include/python2.7') and exists('/usr/include/python3.4')):
+if not (exists('/usr/include/python2.7') and exists('/usr/include/python3.5')):
     print "\033[31mPackage python-dev and python3-dev are required during installation.\033[m"
     abort()
 
