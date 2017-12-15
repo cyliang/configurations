@@ -68,7 +68,7 @@ print "\n---- [ 5. ] Install vim's plugins"
 run_shell('vim -c "PluginInstall" -c "qa"')
 
 print "\n---- [ 6. ] Install YouCompleteMe for vim"
-run_shell('cd ~/.vim/bundle/YouCompleteMe && ./install.py --clang-completer')
+run_shell('cd ~/.vim/bundle/youcompleteme && ./install.py --clang-completer')
 run_shell('wget https://raw.githubusercontent.com/JDevlieghere/dotfiles/master/.vim/.ycm_extra_conf.py -O ~/.vim/.ycm_extra_conf.py')
 
 if branch == 'with-color_coded':
