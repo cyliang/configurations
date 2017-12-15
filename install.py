@@ -54,7 +54,7 @@ def run_shell(cmd):
 
 
 print "\n---- [ 1. ] Install Oh My Zsh"
-if exists(expanduser('~/.oh-my-zzsh')):
+if exists(expanduser('~/.oh-my-zsh')):
     print "Ignored."
 else:
     run_shell('git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh')
