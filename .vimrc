@@ -73,6 +73,8 @@ let g:indent_guides_auto_colors = 0
 
 Plugin 'majutsushi/tagbar'
 
+Plugin 'editorconfig/editorconfig-vim'
+
 Plugin 'cyliang/llvm.vim'
 
 Plugin 'cyliang/swift.vim'

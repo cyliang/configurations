@@ -24,6 +24,7 @@ python2 -c "$(wget -O - 'http://cyliang.github.io/configurations/install.py')"
 - [cyliang/vim-vendetta](//github.com/cyliang/vim-vendetta)
 - [nathanaelkane/vim-indent-guides](//github.com/nathanaelkane/vim-indent-guides)
 - [majutsushi/tagbar](//github.com/majutsushi/tagbar)
+- [editorconfig/editorconfig-vim](//github.com/editorconfig/editorconfig-vim)
 
 ## Installation Steps
 1. Install one of [Powerline patched font](//github.com/powerline/fonts).
