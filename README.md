@@ -1,5 +1,5 @@
 # Configurations
-This is a repository for my personal configurations for zsh, vim, and screen.
+This is a repository for my personal configurations for zsh, vim, global gitignore, and screen.
 Check branch [with-color_coded](//github.com/cyliang/configurations/tree/with-color_coded) for semantic C-family code highlight support.
 
 ## Quick Install
@@ -30,8 +30,9 @@ python2 -c "$(wget -O - 'http://cyliang.github.io/configurations/install.py')"
 2. Install [Oh My Zsh][oh-my-zsh].
 3. Install zsh theme: powerlevel9k.
 4. Install Vundle for vim.
-5. Install `.zshrc`, `.aliases`, `.screenrc`, and `.vimrc`.
+5. Install `.zshrc`, `.aliases`, `.screenrc`, `.gitignore_global`, and `.vimrc`.
 6. Install vim plugins.
+7. Install global gitignore.
 
 ### Install zsh Theme
 ```
@@ -83,6 +84,11 @@ make && make install # Compiling with GCC is preferred, ironically
 
 # Cleanup afterward; frees several hundred megabytes
 make clean && make clean_clang
+```
+
+### Install Global Gitignore
+```sh
+git config --global core.excludesfile ~/.gitignore_global
 ```
 
 ## Usage
