@@ -6,12 +6,12 @@ from os import system, abort
 from os.path import expanduser, exists
 from subprocess import check_output
 
-print "----------------------------------------"
-print "|                                      |"
-print "| Installer of cyliang's configuration |"
-print "| for zsh, vim, and screen             |"
-print "|                                      |"
-print "----------------------------------------"
+print "-----------------------------------------------"
+print "|                                             |"
+print "| Installer of cyliang's configuration        |"
+print "| for zsh, vim, global gitignore, and screen  |"
+print "|                                             |"
+print "-----------------------------------------------"
 print
 
 print "\033[31mThis installer will override your current settings!\033[m"
@@ -77,6 +77,7 @@ run_shell('wget https://raw.githubusercontent.com/cyliang/configurations/master/
 run_shell('wget https://raw.githubusercontent.com/cyliang/configurations/master/.aliases -O ~/.aliases')
 run_shell('wget https://raw.githubusercontent.com/cyliang/configurations/%s/.vimrc -O ~/.vimrc' % branch)
 run_shell('wget https://raw.githubusercontent.com/cyliang/configurations/master/.screenrc -O ~/.screenrc')
+run_shell('wget https://raw.githubusercontent.com/cyliang/configurations/master/.gitignore_global -O ~/.gitignore_global')
 
 print "\n---- [ 5. ] Install vim's plugins"
 run_shell('vim -c "PluginInstall" -c "qa"')
@@ -84,6 +85,9 @@ run_shell('vim -c "PluginInstall" -c "qa"')
 print "\n---- [ 6. ] Install YouCompleteMe for vim"
 run_shell('cd ~/.vim/bundle/youcompleteme && ./install.py --clang-completer')
 run_shell('wget https://raw.githubusercontent.com/JDevlieghere/dotfiles/master/.vim/.ycm_extra_conf.py -O ~/.vim/.ycm_extra_conf.py')
+
+print "\n---- [ 7. ] Install global gitignore"
+run_shell('git config --global core.excludesfile ~/.gitignore_global')
 
 if branch == 'with-color_coded':
     print "\n\033[33mThe color_coded installation is quite complicated,"
