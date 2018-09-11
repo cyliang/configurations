@@ -13,19 +13,6 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-let g:NERDTreeIndicatorMapCustom = {
-    \ "Modified"  : "*",
-    \ "Staged"    : "+",
-    \ "Untracked" : "%",
-    \ "Renamed"   : "➜",
-    \ "Unmerged"  : "═",
-    \ "Deleted"   : "-",
-    \ "Dirty"     : "x",
-    \ "Clean"     : "✓",
-    \ "Unknown"   : "?"
-    \ }
-
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 set laststatus=2
@@ -35,10 +22,6 @@ let g:airline#extensions#tabline#show_close_button = 1
 let g:airline#extensions#tabline#middle_click_preserves_windows = 1
 let g:airline#extensions#ycm#enabled = 1
 let g:airline_powerline_fonts = 1
-
-Plugin 'airblade/vim-gitgutter'
-
-Plugin 'tpope/vim-fugitive'
 
 Plugin 'rdnetto/YCM-Generator'
 Plugin 'valloric/youcompleteme'
@@ -73,9 +56,9 @@ Plugin 'majutsushi/tagbar'
 
 Plugin 'editorconfig/editorconfig-vim'
 
-Plugin 'cyliang/llvm.vim'
-
-Plugin 'cyliang/swift.vim'
+" Plugins for Perforce SCM
+Plugin 'mhinz/vim-signify'
+Plugin 'ngemily/vim-vp4'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -199,3 +182,5 @@ nnoremap <C-n>   :NERDTreeToggle<CR>
 vnoremap <C-f>   :ClangFormat<CR>
 vnoremap <C-d>   :StripWhitespace<CR>
 
+" p4 shortcuts
+nnoremap <C-p>   :Vp4

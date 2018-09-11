@@ -9,7 +9,7 @@ POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='033'
 
 ENABLE_CORRECTION="true"
 
-plugins=(git screen catimg)
+plugins=(screen catimg)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases
