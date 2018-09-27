@@ -17,3 +17,8 @@ plugins=(screen catimg)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases
+
+eval $(dircolors -b $HOME/.dircolors)
+if [ -n "$LS_COLORS" ]; then
+    zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+fi
