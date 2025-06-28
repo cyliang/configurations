@@ -1,15 +1,19 @@
-export PATH=$HOME/bin:$HOME/usr/bin:$HOME/.local/bin:$PATH
-export ZSH=$HOME/.oh-my-zsh
-export LC_CTYPE=en_US.UTF-8
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
-ZSH_THEME="powerlevel9k/powerlevel9k"
-POWERLEVEL9K_DIR_HOME_BACKGROUND='033'
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='033'
-POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='033'
+export ZSH=$HOME/.oh-my-zsh
+
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 ENABLE_CORRECTION="true"
 
-plugins=(git screen catimg)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-source $HOME/.aliases
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
